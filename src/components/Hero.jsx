@@ -20,18 +20,18 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
+          <h1 ref={ref1} className={`flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px] animation4 animation-delay-5 ${inView1 ? 'visible' : ''}`}>
             The Next <br className="sm:block hidden"/>{" "}
             <span className="text-gradient">Generation</span>
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
-          <div ref={ref1} className={`animation1 animation-delay-1 ${inView1 ? 'visible' : ''}`}>
+          <div ref={ref1} className={`animation1 animation-delay-4 ${inView1 ? 'visible' : ''}`}>
             <GetStarted/>
             </div>
           </div>
         </div>
 
-        <h1 className=" font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
+        <h1 ref={ref1} className={` font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full animation4 animation-delay-5 ${inView1 ? 'visible' : ''}`}>
         Payment Method
         </h1>
         <p className={`${styles.paragraph} max-w-[475px] mt-5`}>

@@ -1,14 +1,18 @@
 import { feedback } from "../constants"
 import styles from "../style"
 import FeedbackCard from './FeedbackCard';
+import '../animations/animation.css';
+import { useInView } from 'react-intersection-observer';
 
 const Testimonials = () => {
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   return (
     <section id="clients" className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}>
      <div className="absolute z-[0] w-[60%] h-[60%] -right-[70%] rounded-full blue__gradient " />
 
-     <div className="w-full flex justify-center items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-1">
+     <div ref={ref1} className={`w-full flex justify-center items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-1 animation2 animation-delay-0 ${inView1? 'visible' : ''}`}>
       <h2 className={`${styles.heading2}`}>What people are <br className="sm:block hidden"/>saying about us</h2>
+      
       <div className="w-full md:mt-0 mt-6">
         <p className={`${styles.paragraph} text-left max-w-[475px]`}>Everything you need to accept card payments and grow your business anywhere on the planet.</p>
       </div>

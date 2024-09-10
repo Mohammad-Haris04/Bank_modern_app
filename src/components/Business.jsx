@@ -1,6 +1,9 @@
 import { features } from "../constants"
 import styles,{ layout } from "../style"
 import Button from "./Button"
+import '../animations/animation.css';
+import { useInView } from 'react-intersection-observer';
+
 
 const FeatureCard = ({icon,title,content,index}) => (
   <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? 'mb-6' : 'mb-0'} feature-card`}>
@@ -16,13 +19,16 @@ const FeatureCard = ({icon,title,content,index}) => (
 
 
 const Business = () => {
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   return (
     <section id="features" className={layout.section}>
+      
       <div className={layout.sectionInfo}>
+      <div ref={ref1} className={`animation2 animation-delay-0 ${inView1? 'visible' : ''}`}>
         <h2 className={`${styles.heading2}`}>You do the business,<br className="sm:block hidden"/> we’ll handle the money.</h2>
 
         <p className={`${styles.paragraph} max-w-[460px] mt-5`}>With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.</p>
-     
+        </div>
         <Button styles="mt-10" />
       </div> 
 
