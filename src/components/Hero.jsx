@@ -34,7 +34,7 @@ const Hero = () => {
         <h1 ref={ref1} className={` font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full animation4 animation-delay-5 ${inView1 ? 'visible' : ''}`}>
         Payment Method
         </h1>
-        <p className={`${styles.paragraph} max-w-[475px] mt-5`}>
+        <p ref={ref1} className={`${styles.paragraph} max-w-[475px] mt-5 animation4 animation-delay-5 ${inView1 ? 'visible' : ''}`}>
           Our team of experts uses a methodology to identify the credit cards most likely to fit your needs. We examine annual percentage rates, annual fees.
         </p>
       </div>
