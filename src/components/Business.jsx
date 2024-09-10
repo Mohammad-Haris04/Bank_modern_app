@@ -24,11 +24,11 @@ const Business = () => {
     <section id="features" className={layout.section}>
       
       <div className={layout.sectionInfo}>
-      <div ref={ref1} className={`animation2 animation-delay-0 ${inView1? 'visible' : ''}`}>
-        <h2 className={`${styles.heading2}`}>You do the business,<br className="sm:block hidden"/> we’ll handle the money.</h2>
+      
+        <h2 ref={ref1} className={`${styles.heading2} animation2 animation-delay-0 ${inView1? 'visible' : ''}`}>You do the business,<br className="sm:block hidden"/> we’ll handle the money.</h2>
 
-        <p className={`${styles.paragraph} max-w-[460px] mt-5`}>With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.</p>
-        </div>
+        <p ref={ref1} className={`${styles.paragraph} max-w-[460px] mt-5 animation2 animation-delay-0 ${inView1? 'visible' : ''}`}>With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.</p>
+       
         <Button styles="mt-10" />
       </div> 
 
